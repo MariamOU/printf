@@ -19,7 +19,7 @@ putchar(c);
  * Description: program uses the function print_string
  * Return:A string
  */
-void print_charac(const char *str)
+void print_string(const char *str)
 {
 while (*str != '\0')
 {
