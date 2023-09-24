@@ -29,6 +29,21 @@ str++;
 }
 }
 
+
+
+/**
+ * print_integer - Helper function (To print an integer)
+ * @c: The character to be printed
+ * Description: Program uses the function print_integer
+ * Return:An integer
+ */
+void print_integer(int integ)
+{
+putchar('0' + integ);
+}
+
+
+
 /**
  * _printf - The principal function
  * @format: A character string
@@ -59,6 +74,11 @@ printed_charac++;
 break;
 case '%':
 print_charac('%');
+printed_charac++;
+break;
+case 'd':
+case 'i':
+print_integer(va_arg(args, int));
 printed_charac++;
 break;
 default:
